@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colour Quiz</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jura:wght@700&family=Krona+One&family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1 class="heading">Colour Quiz</h1>
+    <div class="container" id="colourQuizDisplay">
+      <h2 class="score">Score: <span id="score">0</span></h2>
+      <h2 class="question">
+        Question <span id="questionNumber"></span>: Which colour is this?
+      </h2>
+      <div class="colour-and-answers">
+        <div class="colour" id="colour"></div>
+        <div class="answer-btn-container">
+          <button class="answer-btn btn" data-answer-btn></button>
+          <button class="answer-btn btn" data-answer-btn></button>
+          <button class="answer-btn btn" data-answer-btn></button>
+          <button class="answer-btn btn" data-answer-btn></button>
+        </div>
+      </div>
+    </div>
+    <div class="container hidden score-display" id="finalScoreDisplay">
+      <h2 class="score">Your Final Score is <span id="finalScore"></span></h2>
+      <a href="index.html" class="remove-link-decoration"
+        ><div class="play-again-btn btn">Play Again</div></a
+      >
+    </div>
+  </body>
+</html>

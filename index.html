@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colour Quiz</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jura:wght@700&family=Krona+One&family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading">Colour Quiz</h1>
+      <form action="colourQuiz.html" class="quiz-form">
+        <p class="text">Guess the hexadecimal code of a random colour</p>
+        <div class="number-input">
+          <label for="numberOfQuestions">Number of Questions:</label>
+          <input
+            type="number"
+            min="5"
+            max="50"
+            maxlength="2"
+            value="10"
+            id="numberOfQuestions"
+            name="numberOfQuestions"
+          />
+        </div>
+        <button type="submit" class="start-btn btn">Start</button>
+      </form>
+    </div>
+  </body>
+</html>
