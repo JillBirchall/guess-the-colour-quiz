@@ -1,7 +1,7 @@
 :root {
-  --heading-font-family: "Krona One", sans-serif;
-  --text-font-family: "Jura", sans-serif;
-  --button-font-family: "Roboto", sans-serif;
+  --heading-font-family: "Quicksand", sans-serif;
+  --text-font-family: "Quicksand", sans-serif;
+  --button-font-family: "Quicksand", sans-serif;
 }
 
 /* Layout */
@@ -15,12 +15,18 @@
   width: 100%;
 }
 
+.game-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 .hidden {
   display: none;
 }
 
 .quiz-form {
-  margin-top: 50px;
+  margin: 0 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -32,48 +38,64 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
+  align-items: space-around;
 }
 
 .score-display {
-  margin-top: 80px;
+  margin-top: 40px;
 }
 
 /* Text */
 
 .heading {
   font-family: var(--heading-font-family);
-  font-size: 3rem;
+  font-size: 32px;
   text-align: center;
 }
 
 .text {
   font-family: var(--text-font-family);
-  font-size: 1.25rem;
+  font-size: 20px;
 }
 
 .question {
   font-family: var(--text-font-family);
+  font-size: 20px;
+}
+
+.colour-number-text {
+  font-weight: 700;
 }
 
 .score {
   font-family: var(--text-font-family);
-  margin-bottom: 50px;
+  font-size: 24px;
+  margin: 0 10px 10px 0;
+  font-weight: 500;
+  text-align: center;
+}
+
+.final-score {
+  font-family: var(--text-font-family);
+  font-weight: 500;
+  margin-bottom: 40px;
 }
 
 /* Input */
 
+input {
+  margin-left: 10px;
+}
+
 .number-input {
   font-family: var(--text-font-family);
-  font-size: 1.25em;
+  font-size: 20px;
 }
 
 /* Random Colour Display */
 
 .colour {
-  height: 250px;
-  width: 250px;
+  width: 60%;
   background-color: #ffffff;
 }
 
@@ -81,24 +103,23 @@
 
 .btn {
   font-family: var(--button-font-family);
-  height: 50px;
+  height: 40px;
   width: 100px;
   border: none;
   outline: none;
-  border-radius: 5%;
   cursor: pointer;
   color: white;
 }
 
 .start-btn {
   margin: 10px;
-  background-color: steelblue;
+  background-color: #5947ff;
   font-size: 1.5em;
 }
 
 .play-again-btn {
   color: white;
-  background-color: steelblue;
+  background-color: #5947ff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -119,12 +140,13 @@
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  width: 150px;
+  width: 40%;
 }
 
 .answer-btn {
   background-color: rgb(119, 119, 119);
   font-size: 1.25em;
+  margin: 5px 0;
 }
 
 .answer-btn:hover {
@@ -137,4 +159,32 @@
 
 .incorrect {
   background-color: red;
+}
+
+@media (orientation: landscape),
+  (orientation: portrait) and (min-width: 550px) {
+  .game-container {
+    width: 50%;
+    justify-content: center;
+  }
+
+  .colour-and-answers {
+    justify-content: center;
+  }
+
+  .answer-btn-container {
+    margin-left: 10px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 800px) {
+  .game-container {
+    width: 40%;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1250px) {
+  .game-container {
+    width: 30%;
+  }
 }

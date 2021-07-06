@@ -14,24 +14,29 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <h1 class="heading">Colour Quiz</h1>
     <div class="container" id="colourQuizDisplay">
-      <h2 class="score">Score: <span id="score">0</span></h2>
-      <h2 class="question">
-        Question <span id="questionNumber"></span>: Which colour is this?
-      </h2>
-      <div class="colour-and-answers">
-        <div class="colour" id="colour"></div>
-        <div class="answer-btn-container">
-          <button class="answer-btn btn" data-answer-btn></button>
-          <button class="answer-btn btn" data-answer-btn></button>
-          <button class="answer-btn btn" data-answer-btn></button>
-          <button class="answer-btn btn" data-answer-btn></button>
+      <div class="game-container">
+        <p class="score">Score: <span id="score">0</span></p>
+        <p class="question">
+          <span class="colour-number-text"
+            >Colour <span id="questionNumber"></span></span
+          >: Which colour is this?
+        </p>
+        <div class="colour-and-answers">
+          <div class="colour" id="colour"></div>
+          <div class="answer-btn-container">
+            <button class="answer-btn btn" data-answer-btn></button>
+            <button class="answer-btn btn" data-answer-btn></button>
+            <button class="answer-btn btn" data-answer-btn></button>
+            <button class="answer-btn btn" data-answer-btn></button>
+          </div>
         </div>
       </div>
     </div>
     <div class="container hidden score-display" id="finalScoreDisplay">
-      <h2 class="score">Your Final Score is <span id="finalScore"></span></h2>
+      <h2 class="final-score">
+        Your Final Score is <span id="finalScore"></span>
+      </h2>
       <a href="index.html" class="remove-link-decoration"
         ><div class="play-again-btn btn">Play Again</div></a
       >
