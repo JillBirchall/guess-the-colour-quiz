@@ -129,18 +129,14 @@ input {
   text-decoration: none;
 }
 
-.start-btn:hover,
-.play-again-btn:hover {
-  box-shadow: 0px 0px 5px 3px rgb(90, 167, 231);
-}
-
 .answer-btn-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   height: 100%;
   width: 40%;
+  margin-left: 10px;
 }
 
 .answer-btn {
@@ -149,16 +145,23 @@ input {
   margin: 5px 0;
 }
 
-.answer-btn:hover {
-  box-shadow: 0px 0px 5px 3px rgb(49, 49, 49);
-}
-
 .correct {
   background-color: green;
 }
 
 .incorrect {
   background-color: red;
+}
+
+@media (hover: hover) {
+  .start-btn:hover,
+  .play-again-btn:hover {
+    box-shadow: 0px 0px 5px 3px hsl(246, 100%, 75%);
+  }
+
+  .answer-btn:hover {
+    box-shadow: 0px 0px 5px 3px rgb(49, 49, 49);
+  }
 }
 
 @media (orientation: landscape),
